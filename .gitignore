@@ -1,0 +1,28 @@
+# Environment & Secrets (NEVER commit secrets!)
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# Dependencies
+node_modules/
+
+# Python virtual environments & cache
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Build & Tooling outputs
+dist/
+build/
+coverage/
+.vercel/
+.vite/
+
+# Logs & OS artifacts
+*.log
+npm-debug.log*
+.DS_Store
+Thumbs.db
