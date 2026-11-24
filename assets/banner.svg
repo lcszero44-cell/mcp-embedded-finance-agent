@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 380" width="1280" height="380">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#020617"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#082f49"/>
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+    <linearGradient id="isoTop" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#0ea5e9" stop-opacity="0.45"/>
+    </linearGradient>
+    <linearGradient id="isoLeft" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="isoRight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#064e3b" stop-opacity="0.9"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="1" opacity="0.5"/>
+    </pattern>
+  </defs>
+
+  <!-- Base Dark Background -->
+  <rect width="1280" height="380" rx="18" fill="url(#bg)"/>
+  <rect width="1280" height="380" rx="18" fill="url(#grid)"/>
+
+  <!-- Ambient Glows -->
+  <circle cx="960" cy="185" r="190" fill="#06b6d4" opacity="0.12"/>
+  <circle cx="1090" cy="140" r="130" fill="#10b981" opacity="0.10"/>
+  <circle cx="160" cy="70" r="140" fill="#38bdf8" opacity="0.08"/>
+
+  <!-- Top Left Pill -->
+  <g transform="translate(56, 46)">
+    <rect width="410" height="30" rx="15" fill="#0f172a" stroke="#22d3ee" stroke-opacity="0.5"/>
+    <circle cx="18" cy="15" r="4.5" fill="#10b981"/>
+    <text x="32" y="19" fill="#67e8f9" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" font-weight="700" letter-spacing="1.2">
+      DIO • BOOTCAMP BRADESCO • MODEL CONTEXT PROTOCOL
+    </text>
+  </g>
+
+  <!-- Main Headline -->
+  <text x="56" y="132" fill="#f8fafc" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="40" font-weight="800" letter-spacing="-0.6">
+    MCP EMBEDDED FINANCE AGENT
+  </text>
+  <text x="56" y="170" fill="url(#cyanGrad)" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" letter-spacing="1.5">
+    // PLUGGY + PLAID SANDBOX ARCHITECTURE
+  </text>
+
+  <!-- Subtitle -->
+  <text x="56" y="210" fill="#cbd5e1" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="16">
+    Levando o banco para onde o cliente já está: assistente financeiro embutido no app
+  </text>
+  <text x="56" y="234" fill="#94a3b8" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="15">
+    NovaPay Travel &amp; Store com backend seguro Etapa 2, câmbio USD/BRL declarado e webhooks.
+  </text>
+
+  <!-- Tech Badges -->
+  <g transform="translate(56, 266)" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" font-weight="600">
+    <rect x="0" y="0" width="168" height="34" rx="8" fill="#0f172a" stroke="#22d3ee" stroke-opacity="0.5"/>
+    <text x="16" y="21" fill="#67e8f9">pluggy-docs (HTTP)</text>
+
+    <rect x="180" y="0" width="192" height="34" rx="8" fill="#0f172a" stroke="#10b981" stroke-opacity="0.5"/>
+    <text x="196" y="21" fill="#6ee7b7">plaid-sandbox (STDIO)</text>
+
+    <rect x="384" y="0" width="168" height="34" rx="8" fill="#0f172a" stroke="#f59e0b" stroke-opacity="0.5"/>
+    <text x="400" y="21" fill="#fcd34d">1 USD = R$ 5,75 FX</text>
+
+    <rect x="564" y="0" width="162" height="34" rx="8" fill="#0f172a" stroke="#38bdf8" stroke-opacity="0.5"/>
+    <text x="580" y="21" fill="#bae6fd">Zero Secrets Git</text>
+  </g>
+
+  <!-- Bottom Sandbox Strip -->
+  <g transform="translate(56, 326)">
+    <rect width="670" height="28" rx="6" fill="#451a03" fill-opacity="0.65" stroke="#f59e0b" stroke-opacity="0.5"/>
+    <text x="14" y="18" fill="#fde68a" font-family="system-ui, sans-serif" font-size="11.5" font-weight="600">
+      ⚠ Ambiente de Demonstração Sandbox — Dados Fictícios (Plaid Sandbox &amp; Pluggy MCP Docs)
+    </text>
+  </g>
+
+  <!-- Right Side: 3D Isometric MCP Architecture Stack -->
+  <g transform="translate(865, 48)">
+    <!-- Connecting Data Pipes -->
+    <path d="M 165 92 L 75 180" stroke="#22d3ee" stroke-width="2.5" stroke-dasharray="6 5" opacity="0.85"/>
+    <path d="M 165 92 L 265 180" stroke="#10b981" stroke-width="2.5" stroke-dasharray="6 5" opacity="0.85"/>
+    <path d="M 75 230 L 165 274 L 265 230" stroke="#38bdf8" stroke-width="2" opacity="0.65" fill="none"/>
+
+    <!-- Top Isometric Cube: MCP Orchestrator -->
+    <g transform="translate(95, 10)" filter="url(#glow)">
+      <polygon points="70,0 140,36 70,72 0,36" fill="url(#isoTop)" stroke="#7dd3fc" stroke-width="1.5"/>
+      <polygon points="0,36 70,72 70,124 0,88" fill="url(#isoLeft)" stroke="#38bdf8" stroke-width="1"/>
+      <polygon points="140,36 70,72 70,124 140,88" fill="url(#isoRight)" stroke="#34d399" stroke-width="1"/>
+      <text x="70" y="40" text-anchor="middle" fill="#f8fafc" font-family="ui-monospace, monospace" font-size="12" font-weight="800">MCP ROUTER</text>
+      <text x="70" y="55" text-anchor="middle" fill="#e0f2fe" font-family="ui-monospace, monospace" font-size="9.5">BACKEND ETAPA 2</text>
+    </g>
+
+    <!-- Left Isometric Cube: Pluggy Docs MCP -->
+    <g transform="translate(5, 148)">
+      <polygon points="70,0 140,34 70,68 0,34" fill="#0c4a6e" stroke="#22d3ee" stroke-width="1.5"/>
+      <polygon points="0,34 70,68 70,112 0,78" fill="#082f49" stroke="#0ea5e9" stroke-width="1"/>
+      <polygon points="140,34 70,68 70,112 140,78" fill="#0f172a" stroke="#22d3ee" stroke-width="1"/>
+      <text x="70" y="36" text-anchor="middle" fill="#67e8f9" font-family="ui-monospace, monospace" font-size="11.5" font-weight="800">PLUGGY MCP</text>
+      <text x="70" y="51" text-anchor="middle" fill="#bae6fd" font-family="ui-monospace, monospace" font-size="9">Streamable HTTP</text>
+    </g>
+
+    <!-- Right Isometric Cube: Plaid Sandbox MCP -->
+    <g transform="translate(195, 148)">
+      <polygon points="70,0 140,34 70,68 0,34" fill="#064e3b" stroke="#10b981" stroke-width="1.5"/>
+      <polygon points="0,34 70,68 70,112 0,78" fill="#022c22" stroke="#10b981" stroke-width="1"/>
+      <polygon points="140,34 70,68 70,112 140,78" fill="#0f172a" stroke="#34d399" stroke-width="1"/>
+      <text x="70" y="36" text-anchor="middle" fill="#6ee7b7" font-family="ui-monospace, monospace" font-size="11.5" font-weight="800">PLAID MCP</text>
+      <text x="70" y="51" text-anchor="middle" fill="#a7f3d0" font-family="ui-monospace, monospace" font-size="9">STDIO • uvx</text>
+    </g>
+
+    <!-- Bottom Pill: Embedded Client -->
+    <g transform="translate(70, 268)">
+      <rect width="192" height="36" rx="10" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5"/>
+      <text x="96" y="22" text-anchor="middle" fill="#f8fafc" font-family="ui-monospace, monospace" font-size="11" font-weight="700">
+        NOVAPAY APP + WEBHOOKS
+      </text>
+    </g>
+  </g>
+</svg>
