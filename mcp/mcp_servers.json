@@ -1,0 +1,25 @@
+{
+  "$schema": "https://modelcontextprotocol.io/schemas/mcp_servers.schema.json",
+  "mcpServers": {
+    "pluggy-docs": {
+      "transport": "streamable-http",
+      "type": "http",
+      "url": "https://mcp.pluggy.ai/mcp",
+      "description": "Servidor MCP oficial da documentação Pluggy (Open Finance Brasil: Items, Connectors, Accounts, Transactions, Webhooks). Não requer API key."
+    },
+    "plaid-sandbox": {
+      "transport": "stdio",
+      "type": "stdio",
+      "command": "uvx",
+      "args": [
+        "mcp-server-plaid"
+      ],
+      "env": {
+        "PLAID_CLIENT_ID": "${PLAID_CLIENT_ID}",
+        "PLAID_SECRET": "${PLAID_SECRET}",
+        "PLAID_ENV": "sandbox"
+      },
+      "description": "Servidor MCP Plaid Sandbox via uvx (STDIO) para consulta segura de saldos, contas, transações fictícias e análise de gastos."
+    }
+  }
+}
